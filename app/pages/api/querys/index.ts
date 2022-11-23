@@ -4,10 +4,12 @@ import { pool } from "../../../config/bdConection";
 export default async function handler(req, res) {
 
     const hashThing = (password) =>{
+        
         return bcryptjs.hashSync(password,8)
     }
 
     const guardarDatos = async(req,res) =>{
+        console.log('Estoy aquí')
         const {nombre,ap_paterno,ap_materno,correo,contrasena,aprendizaje} = req.body
         const [correosbd]= await pool.query('SELECT cor_cue FROM cuenta WHERE cor_cue = ?',[correo])
         
@@ -16,28 +18,62 @@ export default async function handler(req, res) {
         const sfCorreos=JSON.stringify(correosbd)
         console.log(sfCorreos)
         if(sfCorreos=='[]'){
-            const result = await pool.query('INSERT INTO cuenta (nom_cue,apP_cue,apM_cue,cor_cue,con_cue,id_per) VALUES(?,?,?,?,?,?)',[nombre,ap_paterno,ap_materno,correo,hashThing(contrasena),aprendizaje])
+            const hashContrasena=hashThing(contrasena);
+            console.log(hashContrasena)
+            const result = await pool.query('INSERT INTO cuenta (nom_cue,apP_cue,apM_cue,cor_cue,con_cue,id_per) VALUES(?,?,?,?,?,?)',[nombre,ap_paterno,ap_materno,correo,hashContrasena,aprendizaje])
 
             console.log('Redireccion a la principal')
-            res.redirect(307, '/');
+            return res.redirect(307, '/Login');
         }
         else{
             console.log('Está repetido')
+            return res.redirect(307, '/Signin');
         }
     }
 
     const consultarDatos = async(req,res) =>{
-        const {correo,contrasena,} = req.body
-        const [result] = await pool.query('SELECT * FROM cuenta')
-        console.log(result)
-        console.log("ptm")
-        return res.status(200).json('Tomando un producto: '+ req.query.id)
+        const {correo,contrasena} = req.body
+        console.log(correo+contrasena)
+        const [[result]] = await pool.query('SELECT con_cue FROM cuenta WHERE cor_cue = ?',[correo])
+        const bytesString = String.fromCharCode(...result.con_cue)
+        try{
+            bcryptjs.compare(contrasena,bytesString,(err,resultado)=>{
+                if(resultado){
+                    console.log('Contraseña correcta')
+                }
+                else{
+                    console.log('Contraseña incorrecta')
+                }
+                console.log(bytesString)
+            })
+        }
+        catch(err){
+            console.log(err)
+        }
+        const sfResult=JSON.stringify(result)
+
+        
+        if(sfResult==undefined||sfResult==null){
+            console.log('Esas credenciales no coinciden')
+            return res.redirect(307, '/Signin');
+        }
+        else{
+            console.log('Entrasteee')
+            return res.redirect(307, '/Principal');
+        }
     }
     switch(req.method){
 
         case 'POST':
-            return await guardarDatos(req,res)
-            
+            if(req.body.tipo=='guardar'){
+                guardarDatos(req,res)
+            }
+            else if(req.body.tipo=='consultar'){
+                consultarDatos(req,res)
+            }
+            else{
+                console.log('No se que hacer')
+            }
         case 'GET':
             return await consultarDatos(req,res) 
         

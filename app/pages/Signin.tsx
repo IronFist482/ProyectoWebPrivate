@@ -21,7 +21,8 @@ export default function Signin() {
       ap_materno: apellido_m,
       correo: correo,
       contrasena: contrasena,
-      aprendizaje: 4
+      aprendizaje: 4,
+      tipo: 'guardar'
 
     })
     console.log(res)
