@@ -1,0 +1,89 @@
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+
+
+
+.divNumero{
+    position: relative;
+    top: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: transparent;
+}
+.divElemento{
+    position: relative;
+    top: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: transparent;
+    font-size: 40px;
+    font-weight: 600;
+}
+.divPeso{
+    position: relative;
+    top: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: transparent;
+}
+.divElectronegatividad{
+    position: relative;
+    top: 10px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background-color: transparent;
+}
+.divInfo{
+    position: absolute;
+    padding: 10px;
+    top: 166px;
+    left: 440px;
+    width: 310px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.divInterno{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 310px;
+    background-color: transparent;
+}
+.divContenido{
+    position: relative;
+    height: 40px;
+    width: 90px;
+    margin-left: 7px;
+    margin-right: 6px;
+    margin-top: 4px;
+    background-color: transparent;
+    text-align: center;
+}
+.divContenidoCambiante{
+    margin-top: 5px;
+    width: 90px;
+    height: auto;
+    background-color: transparent;
+}
+
+
+
+
+.botonNumeros{
+    background-color: transparent;
+    position: relative;
+    top: -4px;
+    width: 40px;
+    height: 40px;
+    border-style:hidden;
+    color: #b9b7b7;
+    font-size: 14px;
+}

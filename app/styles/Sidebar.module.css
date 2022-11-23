@@ -1,0 +1,120 @@
+.sidebarContenedor{
+    position: fixed;
+    right: 0px;
+    height: 100%;
+    width: 200px;
+    align-items: center;
+    text-align: right;
+    align-content: center;
+    padding-top: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #16191c;
+    border-left: 2px solid #717274;
+}
+.divLogo{
+    position: relative;
+    left: 24px;
+    width: 150px;
+    height: 80px;
+    color: aliceblue;
+    font-size: 24px;
+    background-color: transparent;
+}
+.divOpcionesPerfil{
+    position: absolute;
+    padding-top: 20px;
+    padding-right: 50px;
+    width: 150px;
+    right: 0px;
+    height: 40px;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 21px;
+    transition: 500ms;
+    
+}
+.divOpcionesPerfil:hover{
+    background-color: #39433f;
+    transition: 500ms;
+    width: 160px;
+    padding-right: 40px;
+}
+.divOpcionesCuenta{
+    position: absolute;
+    padding-top: 20px;
+    top: 160px;
+    right: 0px;
+    height: 40px;
+    padding-right: 50px;
+    width: 150px;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 21px;
+    transition: 500ms;
+}
+.divOpcionesCuenta:hover{
+    background-color: #39433f;
+    transition: 500ms;
+    width: 160px;
+    padding-right: 40px;
+}
+.divOpcionesProgreso{
+    position: absolute;
+    padding-top: 20px;
+    right: 0px;
+    top: 220px;
+    height: 40px;
+    padding-right: 50px;
+    width: 150px;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 21px;
+    transition: 500ms;
+}
+.divOpcionesProgreso:hover{
+    background-color: #39433f;
+    transition: 500ms;
+    width: 160px;
+    padding-right: 40px;
+}
+.divOpcionesGestion{
+    position: absolute;
+    padding-top: 20px;
+    right: 0px;
+    top: 280px;
+    height: 40px;
+    padding-right: 50px;
+    width: 150px;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 21px;
+    transition: 500ms;
+}
+.divOpcionesGestion:hover{
+    background-color: #39433f;
+    transition: 500ms;
+    width: 160px;
+    padding-right: 40px;
+}
+.rayita{
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    width: 160px;
+    height: 0px;
+}
+.icons{
+    position: relative;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    color: aliceblue;
+}
+.rayitaBaja{
+    position: absolute;
+    top: 620px;
+    left: 20px;
+    width: 160px;
+    height: 0px;
+}

@@ -1,0 +1,94 @@
+.header{
+  height: 100px;
+  width: 100%;
+}
+
+.logoTexto {
+  position: absolute;
+  width: 300px;
+  height: 60px;
+  left: 130px;
+  top: 20px;
+  background: url(../public/img/logo-texto.png);
+}
+
+.logoFigura {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  left: 30px;
+  top: 10px;
+  background: url(../public/img/logo-figura.png);
+}
+
+.logoCompleto {
+  width: 500px;
+  height: 90px;
+  background-color: transparent;
+}
+
+.loginSignin {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: transparent;
+  position: absolute;
+  width: 360px;
+  height: 100px;
+  right: 0px;
+  top: 0px;
+}
+
+.loginBoton {
+  cursor: pointer;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signinBoton {
+  cursor: pointer;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.textoBoton {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  
+
+  /* identical to box height */
+  color: #c0c0c0;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.textoBoton:hover {
+  color: #000000;
+}

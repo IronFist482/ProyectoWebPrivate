@@ -1,0 +1,20 @@
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+.contenedorConfiguracion{
+    position: absolute;
+    height: 100%;
+    width:1125px;
+    background-color:#16191cab;
+}
+.barraLateralSolida{
+    position:fixed;
+    left: 0px;
+    top: 0px;
+    width: 70px;
+    height: 100%;
+    background-color: #16191c;
+    
+}

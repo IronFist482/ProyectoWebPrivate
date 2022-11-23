@@ -1,0 +1,66 @@
+.divContenedorCompleto{
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+}
+.divFormulario{
+    position: absolute;
+    top: 140px;
+    width: 400px;
+    height: 120px;
+    background-color: transparent;
+}
+.divNumero{
+    position: relative;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #17895f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.labelPregunta{
+    position: absolute;
+    top: 40px;
+    left: 90px;
+    width: 340px;
+    height: auto;
+    color: antiquewhite;
+    font-size: 20px;
+    text-align: justify;
+    background-color: transparent;
+    
+}
+.radioButtons{
+    position: relative;
+    margin-top: 10px;
+    top: 0px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+}
+.labelsRadioButton{
+    position: relative;
+    top: -10px;
+    left: 60px;
+    color: antiquewhite;
+    background-color: transparent;
+}
+.botonSiguiente{
+    position: absolute;
+    top: 160px;
+    left: 340px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #17895f;
+    color: antiquewhite;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+}

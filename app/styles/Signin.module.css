@@ -1,0 +1,208 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #16191c;
+}
+.circuloVerde00{
+    position: fixed;
+    width: 2000px;
+    height: 2000px;
+    left: -320px;
+    top: -660px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(23, 137, 96, 0.4) 0.01%,
+      rgba(23, 137, 96, 0.4) 0.02%,
+      rgba(23, 137, 96, 0) 100%
+    );
+}
+.formularioPrimario{
+    position: absolute;
+    left: 50px;
+    top: 170px;
+    width: 550px;
+    height: 300px;
+    background-color: #34393f ;
+    border-radius: 30px;
+    padding: 50px;
+}
+.contenedorFormularioDatos{
+    position: absolute;
+    width: 600px;
+    height: 360px;
+    background-color: transparent;
+}
+.titulo{
+    background-color: transparent;
+    position: absolute;
+    top: 50px;
+    left: 220px;
+    text-align: center;
+    color:rgb(201, 200, 200);
+    font-size: 50px;
+    width: 300px;
+    height: 80px;
+}
+.labelNombre{
+    position: absolute;
+    top:0px;
+    width: 100px;
+    height: 30px;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 18px;
+    
+}
+.inputNombre{
+    position: absolute;
+    top:24px;
+    width: 220px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.labelApellidoMaterno{
+    position: absolute;
+    top: 90px;
+    width: 200px;
+    height: 30px;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 18px;
+}
+.inputApellidoMaterno{
+    position: absolute;
+    top: 114px;
+    width: 220px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.labelApellidoPaterno{
+    position: absolute;
+    top: 180px;
+    width: 200px;
+    height: 30px;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 18px;
+}
+.inputApellidoPaterno{
+    position: absolute;
+    top: 204px;
+    width: 220px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.labelNivelAcademico{
+    position: absolute;
+    top:0px;
+    left: 300px;
+    width: 210px;
+    height: 30px;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 18px;
+}
+.selectNivel{
+    position: absolute;
+    top:24px;
+    left: 300px;
+    width: 234px;
+    height: 34px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding-left: 6px;
+    font-size: 16px;
+}
+.optionSelect{
+    position: relative;
+    background-color: aliceblue;
+    border-radius: 6px;
+}
+.labelCorreo{
+    position: absolute;
+    top:90px;
+    left: 300px;
+    width: 200px;
+    height: 30px;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 18px;
+}
+.inputCorreo{
+    position: absolute;
+    top:114px;
+    left: 300px;
+    width: 220px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.labelContrasena{
+    position: absolute;
+    top: 180px;
+    left: 300px;
+    width: 100px;
+    height: 30px;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 18px;
+}
+.inputContrasena{
+    position: absolute;
+    top:204px;
+    left: 300px;
+    width: 220px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.botonSiguiente{
+    position: absolute;
+    top: 280px;
+    left: 120px;
+    width: 300px;
+    height: 50px;
+    color: aliceblue;
+    background-color: #1c9a6d;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.formulario{
+    background-color: transparent;
+    width: auto;
+    height: auto;
+}
+.divContenedorPregunta{
+    position: relative;
+    width: 480px;
+    height: 360px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+.divContenedorSecundario{
+    position: absolute;
+    left: 740px;
+    top: 140px;
+    width: 480px;
+    height: 360px;
+    background-color: #34393f ;
+    border-radius: 30px;
+    padding: 30px;
+}

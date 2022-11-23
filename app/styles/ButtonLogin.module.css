@@ -1,0 +1,47 @@
+.loginBoton {
+  cursor: pointer;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+    
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  transition: 400ms;
+  border: none;
+  }
+  
+.loginBoton:hover {
+  width: 180px;
+  background-color: #686868;
+  height: 100px;
+  transition: 400ms;
+
+}
+
+.textoBoton {
+  width: 200px;
+  height: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: transparent;
+  
+  /* identical to box height */
+  color: #c0c0c0;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+  .textoBoton:hover {
+    color: #000000;
+  }
