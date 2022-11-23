@@ -6,27 +6,29 @@ import axios from "axios";
 
 
 export default function Signin() {
+
   const [nombre,setNombre]= useState("")
   const [apellido_p,setApellido_p]= useState("")
   const [apellido_m,setApellido_m]= useState("")
   const [unidad_a,setUnidad_a]= useState("")
   const [correo,setCorreo]= useState("")
   const [contrasena,setContrasena]= useState("")
+
   const validacion = async(e)=>{
-    const res = await axios.post('./api/querys', {
+    const res = await axios.post('/api/querys', {
       nombre: nombre,
-      ap_materno: apellido_p,
-      ap_paterno: apellido_m,
+      ap_paterno: apellido_p,
+      ap_materno: apellido_m,
       correo: correo,
       contrasena: contrasena,
-      aprendizaje: 1
+      aprendizaje: 4
 
     })
     console.log(res)
     
   }
   const h = (e) =>{
-    setUnidad_a(event.target.value)
+    setUnidad_a(e.target.value)
   }
   
   return (
@@ -67,7 +69,7 @@ export default function Signin() {
               Contraseña
             </label>
             <input className={styles.inputContrasena} type="password" id="contrasena" onChange={event => setContrasena(event.target.value)} required/>
-            <button className={styles.botonSiguiente}></button>
+            <button className={styles.botonSiguiente}>Registrar</button>
           </form>
         </div>
         

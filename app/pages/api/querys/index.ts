@@ -8,26 +8,21 @@ export default async function handler(req, res) {
     }
 
     const guardarDatos = async(req,res) =>{
-        const {nombre,ap_materno,ap_paterno,correo,contrasena,aprendizaje} = req.body
-        const hash = hashThing(contrasena)
-        const correosbd= await pool.query('SELECT cor_cue FROM cuenta WHERE cor_cue = ?',[correo])
+        const {nombre,ap_paterno,ap_materno,correo,contrasena,aprendizaje} = req.body
+        const [correosbd]= await pool.query('SELECT cor_cue FROM cuenta WHERE cor_cue = ?',[correo])
+        
         console.log(correosbd)
         console.log(correo)
-        if(correosbd==null){
-            try {
-                // some await stuff here
-                res.redirect(307, '/Signin');
-            } catch (err) {
-                res.status(500).send({ error: 'Error while fetching data' });
-            }
+        const sfCorreos=JSON.stringify(correosbd)
+        console.log(sfCorreos)
+        if(sfCorreos=='[]'){
+            const result = await pool.query('INSERT INTO cuenta (nom_cue,apP_cue,apM_cue,cor_cue,con_cue,id_per) VALUES(?,?,?,?,?,?)',[nombre,ap_paterno,ap_materno,correo,hashThing(contrasena),aprendizaje])
+
+            console.log('Redireccion a la principal')
+            res.redirect(307, '/');
         }
         else{
-            try {
-                // some await stuff here
-                res.redirect(307, '/');
-            } catch (err) {
-                res.status(500).send({ error: 'Error while fetching data' });
-            }
+            console.log('Está repetido')
         }
     }
 
