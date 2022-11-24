@@ -15,7 +15,7 @@ export default function Signin() {
   const [correo,setCorreo]= useState("")
   const [contrasena,setContrasena]= useState("")
 
-  const validacion = async(e)=>{
+  const validacion = async()=>{
     const res = await axios.post('/api/querys', {
       nombre: nombre,
       ap_paterno: apellido_p,
@@ -29,7 +29,7 @@ export default function Signin() {
     console.log(res)
     
   }
-  const h = (e) =>{
+  const h = (e: { target: { value: React.SetStateAction<string>; }; }) =>{
     setUnidad_a(e.target.value)
   }
   
