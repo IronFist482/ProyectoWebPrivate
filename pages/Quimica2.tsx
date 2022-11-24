@@ -1,6 +1,6 @@
 import "../../styles/Index.module.css"
-import HeaderMaterias from './HeaderMaterias'
-import Menu from "./Menu"
+import HeaderMaterias from '../src/components/HeaderMaterias'
+import Menu from "../src/components/Menu"
 
 export default function Quimica2(){
     return (

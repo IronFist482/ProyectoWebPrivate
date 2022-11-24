@@ -1,5 +1,5 @@
 import styles from '../../styles/Principal.module.css'
-import Menu from "./Menu"
+import Menu from "../src/components/Menu"
 
 export default function Principal(){
   return (

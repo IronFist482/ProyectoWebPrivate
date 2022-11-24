@@ -1,6 +1,6 @@
 import styles from '../../styles/VideosQuimica.module.css'
-import HeaderVideos from './HeaderComplementos'
-import Menu from "./Menu"
+import HeaderVideos from '../src/components/HeaderComplementos'
+import Menu from "../src/components/Menu"
 
 export default function VideosQuimica1(){
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import HeaderGeneral from './HeaderGeneral'
-import Menu from './Menu'
+import HeaderGeneral from '../src/components/HeaderGeneral'
+import Menu from '../src/components/Menu'
 
 export default function MinijuegosQuimica1(){
   return (

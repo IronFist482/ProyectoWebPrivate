@@ -1,6 +1,6 @@
 import '../../styles/Index.module.css'
-import HeaderGeneral from './HeaderGeneral'
-import Menu from "./Menu"
+import HeaderGeneral from '../src/components/HeaderGeneral'
+import Menu from "../src/components/Menu"
 
 export default function Biografias(){
   return (

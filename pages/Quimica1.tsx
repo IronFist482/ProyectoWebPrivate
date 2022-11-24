@@ -1,6 +1,6 @@
 import "../../styles/Index.module.css"
-import HeaderMaterias from './HeaderMaterias'
-import Menu from "./Menu"
+import HeaderMaterias from '../src/components/HeaderMaterias'
+import Menu from "../src/components/Menu"
 
 export default function Quimica1(){
   const unidad1="Plantea medidas preventivas y correctivas para el uso racional de la masa y la energía."

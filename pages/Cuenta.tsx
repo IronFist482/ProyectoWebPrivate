@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Cuenta.module.css'
-import Menu from './Menu'
-import Sidebar from './Sidebar'
+import Menu from '../src/components/Menu'
+import Sidebar from '../src/components/Sidebar'
 
 export default function Cuenta() {
   return (
