@@ -1,4 +1,4 @@
-import HeaderPrincipal from "../components/HeaderPrincipal"
+import HeaderPrincipal from "./components/HeaderPrincipal"
 import styles from '../styles/Home.module.css'
 import { TbNotebook, TbTools, TbChartLine, TbUser,TbFileUpload,TbSearch} from "react-icons/tb"
 
