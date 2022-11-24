@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/Configuracion.module.css'
+import styles from '../styles/Configuracion.module.css'
 import Menu from "../src/components/Menu"
 import Sidebar from "../src/components/Sidebar"
 

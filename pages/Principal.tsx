@@ -1,4 +1,4 @@
-import styles from '../../styles/Principal.module.css'
+import styles from '../styles/Principal.module.css'
 import Menu from "../src/components/Menu"
 
 export default function Principal(){

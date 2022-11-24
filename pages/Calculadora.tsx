@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/Index.module.css'
+import '../styles/Index.module.css'
 import HeaderGeneral from '../src/components/HeaderGeneral'
 import Menu from "../src/components/Menu"
 
