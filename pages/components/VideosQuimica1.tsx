@@ -1,4 +1,4 @@
-import styles from '../styles/VideosQuimica.module.css'
+import styles from '../../styles/VideosQuimica.module.css'
 import HeaderVideos from './HeaderComplementos'
 import Menu from "./Menu"
 

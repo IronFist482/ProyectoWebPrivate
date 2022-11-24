@@ -1,4 +1,4 @@
-import styles from '../styles/HeaderMaterias.module.css'
+import styles from '../../styles/HeaderMaterias.module.css'
 import { TbVideo } from "react-icons/tb";
 import Link from "next/link"
 import { ReactFragment, ReactPortal, ReactElement, JSXElementConstructor } from 'react';

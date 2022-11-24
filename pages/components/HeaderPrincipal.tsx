@@ -1,4 +1,4 @@
-import styles from "../styles/HeaderPrincipal.module.css";
+import styles from "../../styles/HeaderPrincipal.module.css";
 import ButtonLogin from "./ButtonLogin"
 import ButtonSignin from "./ButtonSignin"
 import Link from "next/link"

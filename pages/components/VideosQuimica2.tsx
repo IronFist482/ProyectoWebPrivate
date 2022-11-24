@@ -1,4 +1,4 @@
-import '../styles/Index.module.css'
+import '../../styles/Index.module.css'
 import HeaderVideos from './HeaderComplementos'
 import Menu from "./Menu"
 

@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import "../styles/Index.module.css"
+import "../../styles/Index.module.css"
 import Link from "next/link"
 import axios from 'axios'
 

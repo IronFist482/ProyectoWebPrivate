@@ -1,6 +1,6 @@
 const bcryptjs = require('bcryptjs')
 import React, { useState } from "react";
-import styles from "../styles/Signin.module.css";
+import styles from "../../styles/Signin.module.css";
 import Preguntas from './Preguntas'
 import axios from "axios";
 import {Form,Formik} from 'formik'

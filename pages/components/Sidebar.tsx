@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Sidebar.module.css'
+import styles from '../../styles/Sidebar.module.css'
 import Link from 'next/link'
 import {TbSettings,TbUserCircle,TbTimeline,TbShieldLock} from 'react-icons/tb'
 

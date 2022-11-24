@@ -1,7 +1,7 @@
 import HeaderGeneral from './HeaderGeneral'
 import Menu from "./Menu"
 import React,{useState} from 'react'
-import styles from '../styles/TablaPeriodica.module.css'
+import styles from '../../styles/TablaPeriodica.module.css'
 
 export default function TablaPeriodica(){
   

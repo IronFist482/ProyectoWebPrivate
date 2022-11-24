@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "../styles/ButtonLogin.module.css"
+import styles from "../../styles/ButtonLogin.module.css"
 
 export default function ButtonLogin() {
   return (

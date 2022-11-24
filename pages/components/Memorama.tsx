@@ -1,6 +1,6 @@
 import Menu from './Menu'
 import HeaderGeneral from './HeaderGeneral'
-import styles from '../styles/Memorama.module.css'
+import styles from '../../styles/Memorama.module.css'
 
 export default function Memorama(){
   return (

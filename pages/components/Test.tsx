@@ -1,4 +1,4 @@
-import style from '../styles/Test.module.css'
+import style from '../../styles/Test.module.css'
 import Preguntas from './Preguntas'
 import Link from 'next/link'
 import Script from 'next/script'

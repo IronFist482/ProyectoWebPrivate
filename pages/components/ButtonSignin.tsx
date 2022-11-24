@@ -1,5 +1,5 @@
 
-import styles from "../styles/ButtonSignin.module.css"
+import styles from "../../styles/ButtonSignin.module.css"
 
 export default function ButtonSignin() {
   return (

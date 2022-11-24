@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Cuenta.module.css'
+import styles from '../../styles/Cuenta.module.css'
 import Menu from './Menu'
 import Sidebar from './Sidebar'
 

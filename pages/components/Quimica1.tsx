@@ -1,4 +1,4 @@
-import "../styles/Index.module.css"
+import "../../styles/Index.module.css"
 import HeaderMaterias from './HeaderMaterias'
 import Menu from "./Menu"
 

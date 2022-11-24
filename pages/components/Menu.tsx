@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "../styles/Menu.module.css"
+import styles from "../../styles/Menu.module.css"
 import { TbNotebook, TbTools, TbChartLine, TbUser} from "react-icons/tb"
 
 export default function Menu() {
