@@ -1,14 +1,14 @@
 const bcryptjs = require('bcryptjs')
 import { pool } from "../../../config/bdConection";
 
-export default async function handler(req, res) {
+export default async function handler(req: { method: any; body: { tipo: string; }; query: { id: string; }; }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: string): any; new(): any; }; }; }) {
 
-    const hashThing = (password) =>{
+    const hashThing = (password: any) =>{
         
         return bcryptjs.hashSync(password,8)
     }
 
-    const guardarDatos = async(req,res) =>{
+    const guardarDatos = async(req: { method?: any; body: any; query?: { id: string; }; },res: { status?: (arg0: number) => { (): any; new(): any; json: { (arg0: string): any; new(): any; }; }; redirect?: any; }) =>{
         console.log('Estoy aquí')
         const {nombre,ap_paterno,ap_materno,correo,contrasena,aprendizaje} = req.body
         const [correosbd]= await pool.query('SELECT cor_cue FROM cuenta WHERE cor_cue = ?',[correo])
@@ -31,13 +31,13 @@ export default async function handler(req, res) {
         }
     }
 
-    const consultarDatos = async(req,res) =>{
+    const consultarDatos = async(req: { method?: any; body: any; query?: { id: string; }; },res: { status?: (arg0: number) => { (): any; new(): any; json: { (arg0: string): any; new(): any; }; }; redirect?: any; }) =>{
         const {correo,contrasena} = req.body
         console.log(correo+contrasena)
-        const [[result]] = await pool.query('SELECT con_cue FROM cuenta WHERE cor_cue = ?',[correo])
+        const [[result]]:any = await pool.query('SELECT con_cue FROM cuenta WHERE cor_cue = ?',[correo])
         const bytesString = String.fromCharCode(...result.con_cue)
         try{
-            bcryptjs.compare(contrasena,bytesString,(err,resultado)=>{
+            bcryptjs.compare(contrasena,bytesString,(_err: any,resultado: any)=>{
                 if(resultado){
                     console.log('Contraseña correcta')
                 }
