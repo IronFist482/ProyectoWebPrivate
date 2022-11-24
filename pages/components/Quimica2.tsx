@@ -17,7 +17,7 @@ export default function Quimica2(){
             <div className='contenedorCompetencia4'><div className='textoCompetencia'>Unidad IV</div><div className='textoComp'>Propone productos con base en el tipo de enlace químico para aplicar en la vida cotidiana</div></div>
             <div className='contenedorCompetencia5'><div className='textoCompetencia'>Unidad V</div><div className='textoComp'>Emplea el lenguaje químico para nombrar diferentes compuestos inorgánicos, identificando su uso y riesgos en su entorno</div></div>
             <div className='contenedorCompetencia6'><div className='textoCompetencia'>Unidad VI</div><div className='textoComp'>Plantea alternativas referentes a la reactividad entre diversas sustancias y su impacto ambiental</div></div>
-            <HeaderMaterias encabezado="Quimica II" linkVideos="VideosQuimica2" linkDocumentos="DocumentosQuimica2" linkMinijuegos="MinijuegosQuimica2"></HeaderMaterias>
+            <HeaderMaterias encabezado="Quimica II" linkVideos="/VideosQuimica2" linkDocumentos="/DocumentosQuimica2" linkMinijuegos="/MinijuegosQuimica2"></HeaderMaterias>
             <Menu></Menu>
         </>
       )

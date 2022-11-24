@@ -24,7 +24,7 @@ export default function Quimica1(){
         <div className='contenedorCompetencia4'><div className='textoCompetencia'>Unidad IV</div><div className='textoComp'>{unidad4}</div></div>
         <div className='contenedorCompetencia5'><div className='textoCompetencia'>Unidad V</div><div className='textoComp'>{unidad5}</div></div>
         <div className='contenedorCompetencia6'><div className='textoCompetencia'>Unidad VI</div><div className='textoComp'>{unidad6}</div></div>
-        <HeaderMaterias encabezado="Quimica I" linkVideos="VideosQuimica1" linkDocumentos="DocumentosQuimica1" linkMinijuegos="MinijuegosQuimica1"></HeaderMaterias>
+        <HeaderMaterias encabezado="Quimica I" linkVideos="/VideosQuimica1" linkDocumentos="/DocumentosQuimica1" linkMinijuegos="/MinijuegosQuimica1"></HeaderMaterias>
         <Menu></Menu>
         
     </>
