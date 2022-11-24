@@ -10,7 +10,7 @@ export default async function handler(req: { method: any; body: { tipo: string; 
 
     const guardarDatos = async(req: { method?: any; body: any; query?: { id: string; }; },res: { status?: (arg0: number) => { (): any; new(): any; json: { (arg0: string): any; new(): any; }; }; redirect?: any; }) =>{
         console.log('Estoy aquí')
-        const {nombre,ap_paterno,ap_materno,correo,contrasena,aprendizaje} = req.body
+        const {nombre,ap_paterno,ap_materno,correo,contrasena,unidad_a,aprendizaje} = req.body
         const [correosbd]= await pool.query('SELECT cor_cue FROM cuenta WHERE cor_cue = ?',[correo])
         
         console.log(correosbd)
@@ -20,7 +20,7 @@ export default async function handler(req: { method: any; body: { tipo: string; 
         if(sfCorreos=='[]'){
             const hashContrasena=hashThing(contrasena);
             console.log(hashContrasena)
-            const result = await pool.query('INSERT INTO cuenta (nom_cue,apP_cue,apM_cue,cor_cue,con_cue,id_per) VALUES(?,?,?,?,?,?)',[nombre,ap_paterno,ap_materno,correo,hashContrasena,aprendizaje])
+            const result = await pool.query('INSERT INTO cuenta (nom_cue,apP_cue,apM_cue,cor_cue,con_cue,id_uni,id_per) VALUES(?,?,?,?,?,?,?)',[nombre,ap_paterno,ap_materno,correo,hashContrasena,unidad_a,aprendizaje])
 
             console.log('Redireccion a la principal')
             return res.redirect(307, '/Login');

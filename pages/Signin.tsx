@@ -22,6 +22,7 @@ export default function Signin() {
       ap_materno: apellido_m,
       correo: correo,
       contrasena: contrasena,
+      unidad_a: unidad_a,
       aprendizaje: 4,
       tipo: 'guardar'
 
@@ -56,10 +57,10 @@ export default function Signin() {
               Unidad Académica
             </label>
             <select className={styles.selectNivel} id="select_nivel" onChange={h} required>
-              <option className={styles.optionSelect} value="Quimica1">
+              <option className={styles.optionSelect} value={1}>
                 Quimica I
               </option>
-              <option className={styles.optionSelect} value="Quimica2">
+              <option className={styles.optionSelect} value={2}>
                 Quimica II
               </option>
             </select>
