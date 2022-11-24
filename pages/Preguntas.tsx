@@ -41,7 +41,7 @@ export default function Preguntas() {
 
 
 
-  function accion(e){
+  function accion(e: { preventDefault: () => void }){
     if(posicion<=22){
       e.preventDefault();
       asignar()
