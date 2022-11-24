@@ -12,8 +12,8 @@ export default function HeaderPrincipal() {
           <div className={styles.logoTexto}></div>
         </div>
         <div className={styles.loginSignin}>
-          <Link href="../components/Login" className={styles.loginBoton}><ButtonLogin></ButtonLogin></Link>
-          <Link href="../components/Signin" className={styles.signinBoton}><ButtonSignin></ButtonSignin></Link>
+          <Link href="/Login" className={styles.loginBoton}><ButtonLogin></ButtonLogin></Link>
+          <Link href="/Signin" className={styles.signinBoton}><ButtonSignin></ButtonSignin></Link>
         </div>
       </header>
     </>
