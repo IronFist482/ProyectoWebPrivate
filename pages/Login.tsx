@@ -8,7 +8,7 @@ export default function Login(){
   const [correo,setCorreo]= useState("")
   const [contrasena,setContrasena]= useState("")
   const validar = true
-  const validacion = async(e)=>{
+  const validacion = async()=>{
     const res = await axios.post('/api/querys', {
       correo: correo,
       contrasena: contrasena
