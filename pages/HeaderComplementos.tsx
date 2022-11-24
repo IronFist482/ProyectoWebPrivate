@@ -3,7 +3,7 @@ import "../styles/Index.module.css"
 import React, { Component } from "react";
 
 
-export default function HeaderVideos(props: { encabezado: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }){
+export default function HeaderVideos(props: { encabezado: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }): JSX.Element{
   return (
     <>
       <div className="contenedorHeader">
