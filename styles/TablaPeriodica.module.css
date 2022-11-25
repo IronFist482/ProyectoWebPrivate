@@ -44,8 +44,8 @@
     position: absolute;
     padding: 10px;
     top: 166px;
-    left: 440px;
-    width: 310px;
+    left: 33%;
+    width:auto;
     height: 100px;
     background-color: transparent;
     border-radius: 10px;
@@ -54,7 +54,7 @@
     position: relative;
     display: flex;
     height: 50px;
-    width: 310px;
+    width: 70%;
     background-color: transparent;
 }
 .divContenido{

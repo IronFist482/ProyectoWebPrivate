@@ -43,7 +43,7 @@ export default function Menu() {
                 </Link>
               </div>
               <div className="contenedorLinksExtras">
-                <Link href="./Biografias" className="linksMenu">
+                <Link href="./Estadisticas" className="linksMenu">
                   Estadísticas
                 </Link>
               </div>
@@ -51,7 +51,7 @@ export default function Menu() {
                 <Link href="./Configuracion" className="linksMenu">
                   Configuración
                 </Link>
-                <Link href="/" className="linksMenu">
+                <Link href="/api/querys/logout" className="linksMenu">
                   Cerrar Sesión
                 </Link>
               </div>

@@ -13,6 +13,7 @@ export default function Calculadora(){
         <div className='circulo-morado03'></div>
         <HeaderGeneral></HeaderGeneral>
         <div className='paginaHeader'>Calculadora</div>
+        
         <Menu></Menu>
     </>
   )

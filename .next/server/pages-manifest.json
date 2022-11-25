@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/Quimica2": "pages/Quimica2.js",
+  "/Quimica1": "pages/Quimica1.js",
   "/TablaPeriodica": "pages/TablaPeriodica.js"
 }

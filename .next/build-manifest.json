@@ -15,6 +15,16 @@
   ],
   "rootMainFiles": [],
   "pages": {
+    "/Quimica1": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Quimica1.js"
+    ],
+    "/Quimica2": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Quimica2.js"
+    ],
     "/TablaPeriodica": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

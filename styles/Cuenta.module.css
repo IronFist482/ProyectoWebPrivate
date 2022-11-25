@@ -1,5 +1,26 @@
 .contenedor{
     width: 100vw;
     height: 100vh;
-    background-color: darkslategray;
+    background-color: transparent;
+}
+.contenedorConfiguracion{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color:transparent;
+}
+.barraLateralSolida{
+    position:fixed;
+    left: 0px;
+    top: 0px;
+    width: 70px;
+    height: 100%;
+    background-color: #16191c;
+}
+.divContenidoGeneral{
+    margin-left: 100px;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+    border-right: 2px solid #717274;
 }

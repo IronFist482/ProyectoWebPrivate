@@ -6,8 +6,8 @@
 .contenedorConfiguracion{
     position: absolute;
     height: 100%;
-    width:1125px;
-    background-color:#16191cab;
+    width:100%;
+    background-color:transparent;
 }
 .barraLateralSolida{
     position:fixed;
@@ -16,5 +16,82 @@
     width: 70px;
     height: 100%;
     background-color: #16191c;
+}
+.divContenidoGeneral{
+    margin-left: 100px;
+    margin-right: 200px;
+    height: 100%;
+    width: auto;
+    background-color: #1a1e21;
+    border-left: 2px solid #717274;
+}
+.titulo{
+    padding-left: 40px;
+    margin-left: 5%;
+    position: relative;
+    height: 60px;
+    width: 86%;
+    top: 5%;
+    font-size: 40px;
+    background-color: transparent;
+    color: aliceblue;
+    border-bottom: 2px solid #717274;
+}
+.divOpcion{
+    position: relative;
+    top: 2%;
+    margin-top: 10%;
+    padding-left: 2%;
+    margin-left: 5%;
+    width: 70%;
+    height: 6%;
+    color: aliceblue;
+    font-size: 25px;
+    background-color: transparent;
+    border-bottom: 1px solid #717274;
     
+}
+.divExplicacion{
+    position: relative;
+    top: 10%;
+    margin-left: 5%;
+    width: 70%;
+    height: auto;
+    color: aliceblue;
+    font-size: 25px;
+    background-color: transparent;
+}
+.contenedorCorreo{
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+    background-color: transparent;
+    top: 5%;
+    height: 10%;
+    width: 60%;
+}
+.inputCorreo{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    margin: 1%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #3f4042;
+    border: 1px solid #717274;
+    padding-left: 2%;
+    font-size: 20px;
+    color: aliceblue;
+}
+.saveCorreo{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    margin: 1%;
+    border-radius: 10px;
+    background-color: #3d8559;
+    color: aliceblue;
+    font-size: 18px;
+    padding-left: 3%;
+    padding-right: 3%;
 }

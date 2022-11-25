@@ -340,11 +340,14 @@
     background-repeat: no-repeat;
   }
   .textoP{
-    position: absolute;
-    width: 415px;
-    height: 74px;
+    position: relative;
+    width: auto;
+    height: 60px;
     top: 50px;
-    left: 500px;
+    margin-left: 40%;
+    margin-right: 40%;
+    align-content: center;
+    text-align: center;
     background-color: #ffffff00;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -444,7 +447,7 @@
     position: absolute;
     width: 295px;
     height: 60px;
-    left: 1000px;
+    right: 0px;
     top: 10px;
   
     background: url(../public/img/logo-texto.png);
@@ -886,7 +889,7 @@
     top: 250px;
     left: 160px;
     width: 1000px;
-    height: 930px;
+    height: 1200px;
     background-color: #16191cb2;
     border-radius: 20px;
   }
@@ -895,7 +898,7 @@
     background-color: #5a5b5e;
     width: 435px;
     height: 295px;
-    top: 150px;
+    top: 250px;
     left: 40px;
     border-radius: 20px;
     padding: 5px;
@@ -905,9 +908,10 @@
     background-color: #5a5b5e;
     width: 435px;
     height: 295px;
-    top: 150px;
+    top: 250px;
     left: 520px;
     border-radius: 20px;
+    padding: 5px;
   }
   .contenedorVideo3{
     position: absolute;
@@ -917,6 +921,7 @@
     top: 600px;
     left: 40px;
     border-radius: 20px;
+    padding: 5px;
   }
   .contenedorVideo4{
     position: absolute;
@@ -926,6 +931,7 @@
     top: 600px;
     left: 520px;
     border-radius: 20px;
+    padding: 5px;
   }
   .video{
     position: absolute;
@@ -935,7 +941,7 @@
   }
   .tituloVideo1{
     position: absolute;
-    width: 200px;
+    width: 400px;
     height: 30px;
     top: 40px;
     left: 40px;
@@ -977,7 +983,7 @@
     position: absolute;
     width: 200px;
     height: 30px;
-    top: 80px;
+    top: 150px;
     left: 40px;
     background-color: #0d0e0d00;
     font-size: 15px;
@@ -987,7 +993,7 @@
     position: absolute;
     width: 200px;
     height: 30px;
-    top: 80px;
+    top: 150px;
     left: 520px;
     background-color: #0d0e0d00;
     font-size: 15px;
@@ -1126,26 +1132,31 @@
   .contenedorTablaPeriodica1{
     background-color:transparent;
     position: absolute;
-    width: 1000px;
+    
     height: 400px;
-    left: 150px;
+    width: 90%;
+    left: 10%;
+    right: 10%;
     top: 140px;
   }
   .contenedorTablaPeriodica2{
     background-color: transparent;
     position: absolute;
-    width: 724px;
+    width: 90%;
     height: 150px;
-    left: 261px;
+    left: 14%;
+    right: 14%;
     top: 600px;
   }
   .tablaPrincipal{
-    width: 1000px;
+    width: 90%;
+    left: 10%;
+    right: 10%;
     height: 400px;
     color: #b9b7b7;
   }
   .tablaComplementaria{
-    width: 724px;
+    width: 80%;
     height: 114px;
     color: #b9b7b7;
   }
@@ -1199,7 +1210,7 @@
   .eleccionElemento{
     position: absolute;
     top: 166px;
-    left: 330px;
+    left: 24%;
     width: 80px;
     height: 120px;
     background-color: #138b63;

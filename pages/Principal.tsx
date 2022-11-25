@@ -7,7 +7,7 @@ export default function Principal(){
       <div className="circulo-verde00"></div>
     
       <div className="imagenFondo"></div>
-      <div className="textoP">Bienvenido</div>
+      <div className="textoP">Bienvenido Usuario</div>
       <div className={styles.divRecomendacion}></div>
       <Menu></Menu>
     </>

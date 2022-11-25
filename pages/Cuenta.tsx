@@ -6,7 +6,17 @@ import Sidebar from '../src/components/Sidebar'
 export default function Cuenta() {
   return (
     <div className={styles.contenedor}>
-      <Sidebar></Sidebar>
+      <div className='circulo-verde04'></div>
+      <div className='circulo-morado02'></div>
+      <div className='circulo-verde03'></div>
+      <div className='circulo-verde05'></div>
+      <div className='circulo-morado03'></div>
+      <div className={styles.barraLateralSolida}></div>
+      <div className={styles.contenedorConfiguracion}>
+        <Sidebar></Sidebar>
+        <div className={styles.divContenidoGeneral}>
+        </div>
+      </div>
       <Menu></Menu>
     </div>
   )

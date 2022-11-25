@@ -1,0 +1,55 @@
+.contenedor{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedorCompetenciasUnidades1{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 10%;
+    right: 10%;
+    top: 26%;
+    width: 80%;
+    height: 36%;
+    background-color: transparent;
+}
+.contenedorCompetenciasUnidades2{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 10%;
+    right: 10%;
+    top: 60%;
+    width: 80%;
+    height: 36%;
+    background-color: transparent;
+}
+.divTitulo{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: #0d0e0d00;
+    color: #b9b7b7;
+}
+
+.contenedorDatos{
+    position: relative;
+    width: 40%;
+    height: 70%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 4%;
+    text-align: center;
+    background-color: #252525;
+    border-radius: 20px;
+    border: 2px solid rgb(85, 85, 85);
+
+}

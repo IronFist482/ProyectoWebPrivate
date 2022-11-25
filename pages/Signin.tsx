@@ -4,6 +4,7 @@ import styles from "../styles/Signin.module.css";
 import Preguntas from '../src/components/Preguntas'
 import axios from "axios";
 import {Form,Formik} from 'formik'
+import Router from "next/router";
 
 
 export default function Signin() {
@@ -11,11 +12,13 @@ export default function Signin() {
   const [nombre,setNombre]= useState("")
   const [apellido_p,setApellido_p]= useState("")
   const [apellido_m,setApellido_m]= useState("")
-  const [unidad_a,setUnidad_a]= useState("")
+  const [unidad_a,setUnidad_a]= useState(1)
   const [correo,setCorreo]= useState("")
   const [contrasena,setContrasena]= useState("")
+  const [error,setError]= useState(false)
 
-  const validacion = async()=>{
+  const validacion = async(e:any)=>{
+    e.preventDefault()
     const res = await axios.post('/api/querys', {
       nombre: nombre,
       ap_paterno: apellido_p,
@@ -27,13 +30,14 @@ export default function Signin() {
       tipo: 'guardar'
 
     })
-    console.log(res)
+    .then( () => Router.replace('/Login')).catch(resError)
     
   }
-  const h = (e: { target: { value: React.SetStateAction<string>; }; }) =>{
-    setUnidad_a(e.target.value)
-  }
   
+  const resError = (res:any) => {
+    const {errno} = res.response.data
+    errno === 1062 && setError(true)
+  }
   return (
     <div className={styles.container}>
       <div className={styles.circuloVerde00}></div>
@@ -56,7 +60,7 @@ export default function Signin() {
             <label className={styles.labelNivelAcademico}>
               Unidad Académica
             </label>
-            <select className={styles.selectNivel} id="select_nivel" onChange={h} required>
+            <select className={styles.selectNivel} id="select_nivel" onChange={e=>setUnidad_a(Number(e.target.value))} required>
               <option className={styles.optionSelect} value={1}>
                 Quimica I
               </option>
@@ -74,6 +78,7 @@ export default function Signin() {
             <input className={styles.inputContrasena} type="password" id="contrasena" onChange={event => setContrasena(event.target.value)} required/>
             <button className={styles.botonSiguiente}>Registrar</button>
           </form>
+          {error && <div className={styles.error}>El correo ya esta registrado</div>}
         </div>
         
       </div>

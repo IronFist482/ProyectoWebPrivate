@@ -1,0 +1,34 @@
+.headerFondo{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 255, 26, 0);
+    padding-left: 10%;
+    padding-right: 10%;
+    vertical-align: center;
+}
+.divContenedor{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+}
+.headerUnidades{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background-color: transparent;
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+}
+.headerUnidades:hover{
+    
+    color: #1d5d46;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
