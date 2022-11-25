@@ -2,18 +2,25 @@ import {useState} from 'react'
 import Link from "next/link"
 import axios from 'axios'
 import iron from '../config/session'
+import Router from "next/router";
 
 export default function Login(){
 
   const [correo,setCorreo]= useState("")
   const [contrasena,setContrasena]= useState("")
-  const validar = true
-  const validacion = async()=>{
+  const [error,setError]= useState(false)
+  const validacion = async(e:any)=>{
+    e.preventDefault()
     const res = await axios.post('/api/querys/login', {
       correo: correo,
       contrasena: contrasena
     })
+    .then( () => Router.replace('/Principal')).catch(resError)
     
+  }
+  const resError = (res:any) => {
+    setError(true)
+    Router.replace('/Signin')
   }
   return (
     <>

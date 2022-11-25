@@ -36,6 +36,7 @@ export default function Signin() {
   
   const resError = (res:any) => {
     const {errno} = res.response.data
+    
     errno === 1062 && setError(true)
   }
   return (
@@ -62,14 +63,14 @@ export default function Signin() {
             </label>
             <select className={styles.selectNivel} id="select_nivel" onChange={e=>setUnidad_a(Number(e.target.value))} required>
               <option className={styles.optionSelect} value={1}>
-                Quimica I
+                Química I
               </option>
               <option className={styles.optionSelect} value={2}>
-                Quimica II
+                Química II
               </option>
             </select>
             <label className={styles.labelCorreo}>
-              Correo Electronico
+              Correo Electrónico
             </label>
             <input className={styles.inputCorreo} type="email" id="correo" onChange={event => setCorreo(event.target.value)} required/>
             <label className={styles.labelContrasena}>
@@ -78,10 +79,12 @@ export default function Signin() {
             <input className={styles.inputContrasena} type="password" id="contrasena" onChange={event => setContrasena(event.target.value)} required/>
             <button className={styles.botonSiguiente}>Registrar</button>
           </form>
-          {error && <div className={styles.error}>El correo ya esta registrado</div>}
+          
         </div>
         
+        
       </div>
+      {error && <div className={styles.error}>El correo ya está registrado</div>}
       {/*
       <div className={styles.divContenedorSecundario}>
         <div className={styles.divContenedorPregunta}>

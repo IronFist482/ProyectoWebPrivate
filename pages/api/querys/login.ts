@@ -35,9 +35,12 @@ export default iron(async(req:any,res:any)=>{
     switch(req.method){
         case 'POST':
             try {
-                consultarDatos(req,res)
+                const x:any = await consultarDatos(req,res)
+                return res.status(200).json(x);
             }
             catch(error:any){
+                
+                return res.status(400).json(error)
             }
     }
     
