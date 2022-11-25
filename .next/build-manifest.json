@@ -20,11 +20,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/Configuracion": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Configuracion.js"
-    ],
     "/Login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
