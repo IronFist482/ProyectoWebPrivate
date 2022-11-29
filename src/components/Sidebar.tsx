@@ -10,8 +10,7 @@ export default function Sidebar() {
         <hr className={styles.rayita}/>
         <Link className={styles.divOpcionesPerfil} href={"./Configuracion"}>Opciones<TbSettings className={styles.icons}/></Link>
         <Link className={styles.divOpcionesCuenta} href={"./Cuenta"}>Cuenta<TbUserCircle className={styles.icons}/></Link>
-        <Link className={styles.divOpcionesProgreso} href={"./Progreso"}>Progreso<TbTimeline className={styles.icons}/></Link>
-        <Link className={styles.divOpcionesGestion} href={"./Gestion"}>Gestion<TbShieldLock className={styles.icons}/></Link>
+        <Link className={styles.divOpcionesProgreso} href={"./Progresion"}>Progreso<TbTimeline className={styles.icons}/></Link>
         <hr className={styles.rayitaBaja} />
     </div>
   )

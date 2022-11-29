@@ -1,7 +1,7 @@
 const bcryptjs = require('bcryptjs')
 import { pool } from "../../../config/bdConection";
 
-export default async function handler(req: { method: any; body: { tipo: string; }; query: { id: string; }; }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: string): any; new(): any; }; }; }) {
+export default async function handler(req: any, res: any){
 
     const hashThing = (password: any) =>{
         
@@ -18,7 +18,6 @@ export default async function handler(req: { method: any; body: { tipo: string; 
 
     
     switch(req.method){
-
         case 'POST':
             try {
                 const x:any = await guardarDatos(req,res)
@@ -26,13 +25,8 @@ export default async function handler(req: { method: any; body: { tipo: string; 
             } catch (error:any) {
                 return res.status(400).json(error)
             }
-        
-        case 'PUT':
-            return res.status(200).json('Actualizando un producto: '+ req.query.id)
-        case 'DELETE':
-            return res.status(200).json('Eliminando un producto: '+ req.query.id)
         default:
-            return res.status(405).json('Method not allowed')
+            return res.status(400).json({message: 'Method not allowed'})
     }
     
 }

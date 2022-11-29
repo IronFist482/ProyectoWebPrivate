@@ -10,12 +10,10 @@ export default function Login(){
   const [contrasena,setContrasena]= useState("")
   const [error,setError]= useState(false)
   const validacion = async(e:any)=>{
-    e.preventDefault()
     const res = await axios.post('/api/querys/login', {
       correo: correo,
       contrasena: contrasena
-    })
-    .then( () => Router.replace('/Principal')).catch(resError)
+    }).then(() => Router.replace('/Principal')).catch(resError)
     
   }
   const resError = (res:any) => {
@@ -40,15 +38,16 @@ export default function Login(){
   );
 };
 export const getServerSideProps = iron(async({req,res}:any)=>{
-  const user = req.session.get('user')
-  if(user){
+  const session = req.session.get('user')
+  if(session){
     res.setHeader('location','/Principal')
     res.statusCode = 302
     res.end()
-    return {props:{}}
+    return {props:{session:session}}
 
   }
-  return {
-    props: {}
+  return{
+      props: {}
   }
+  
 })

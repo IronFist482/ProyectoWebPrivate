@@ -1,10 +1,9 @@
-const bcryptjs = require('bcryptjs')
+
 import React, { useState } from "react";
 import styles from "../styles/Signin.module.css";
-import Preguntas from '../src/components/Preguntas'
 import axios from "axios";
-import {Form,Formik} from 'formik'
 import Router from "next/router";
+import iron from "../config/session";
 
 
 export default function Signin() {
@@ -97,3 +96,16 @@ export default function Signin() {
     </div>
   );
 }
+export const getServerSideProps = iron(async({req,res}:any)=>{
+  const user = req.session.get('user')
+  if(user){
+    res.setHeader('location','/Principal')
+    res.statusCode = 302
+    res.end()
+    return {props:{}}
+
+  }
+  return {
+    props: {}
+  }
+})

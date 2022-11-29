@@ -1,6 +1,7 @@
 import styles from '../styles/Quimica1.module.css'
 import HeaderMaterias from '../src/components/HeaderMaterias'
 import Menu from "../src/components/Menu"
+import iron from '../config/session'
 
 export default function Quimica1(){
   const unidad1="Plantea medidas preventivas y correctivas para el uso racional de la masa y la energía."
@@ -37,3 +38,16 @@ export default function Quimica1(){
     </>
   )
 }
+export const getServerSideProps = iron(async({req,res}:any)=>{
+  const session = req.session.get('user')
+  if(!session){
+    res.statusCode = 302;
+    res.setHeader('Location', '/Login')
+    res.end()
+    return {props:{}}
+  }
+  return {
+    props: {session:session}
+  }
+  
+})

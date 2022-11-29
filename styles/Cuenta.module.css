@@ -19,8 +19,285 @@
 }
 .divContenidoGeneral{
     margin-left: 100px;
+    margin-right: 200px;
     height: 100%;
     width: auto;
+    background-color: #1a1e21;
+    border-left: 2px solid #717274;
+}
+.titulo{
+    padding-left: 40px;
+    margin-left: 5%;
+    position: relative;
+    height: 60px;
+    width: 86%;
+    top: 5%;
+    font-size: 40px;
     background-color: transparent;
-    border-right: 2px solid #717274;
+    color: aliceblue;
+    border-bottom: 2px solid #717274;
+}
+.divOpcion{
+    position: relative;
+    top: 10%;
+    margin-top: 3%;
+    padding-left: 2%;
+    margin-left: 5%;
+    width: 70%;
+    height: 6%;
+    color: aliceblue;
+    font-size: 25px;
+    background-color: transparent;
+    border-bottom: 1px solid #717274;
+    
+}
+.divExplicacion{
+    position: relative;
+    top: 8%;
+    margin-left: 5%;
+    width: 70%;
+    height: auto;
+    color: aliceblue;
+    font-size: 25px;
+    background-color: transparent;
+}
+.contenedorFormularios1{
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+    top: 12%;
+    height: 10%;
+    width: 80%;
+    background-color: transparent;
+}
+.contenedorFormularios2{
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+    top: 12%;
+    height: 10%;
+    width: 80%;
+    background-color: transparent;
+}
+.contenedorFormularios3{
+    position: relative;
+    display: flex;
+    margin-left: 5%;
+    top: 12%;
+    height: 10%;
+    width: 80%;
+    background-color: transparent;
+}
+.contenedorCorreo{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    margin-right: 7%;
+}
+.inputNombre{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    width: 60%;
+    margin: 1%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #3f4042;
+    border: 1px solid #717274;
+    padding-left: 2%;
+    font-size: 20px;
+    color: aliceblue;
+}
+.selectUnidad{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    width: 400%;
+    margin: 1%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #3f4042;
+    border: 1px solid #717274;
+    padding-left: 2%;
+    font-size: 20px;
+    color: aliceblue;
+}
+.inputCorreo{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    width: 400%;
+    margin: 1%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #3f4042;
+    border: 1px solid #717274;
+    padding-left: 2%;
+    font-size: 20px;
+    margin-right: 3%;
+    color: aliceblue;
+}
+.guardar1{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    right: 0;
+    width: 20%;
+    margin: 1%;
+    margin-left: 30%;
+    border-radius: 10px;
+    background-color: #3d8559;
+    color: aliceblue;
+    font-size: 18px;
+    padding-left: 3%;
+    padding-right: 3%;
+    cursor: pointer;
+}
+.guardar2{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    right: 0;
+    width: 20%;
+    margin: 1%;
+    margin-left: 30%;
+    border-radius: 10px;
+    background-color: #3d8559;
+    color: aliceblue;
+    font-size: 18px;
+    padding-left: 3%;
+    padding-right: 3%;
+    cursor: pointer;
+}
+.saveCorreo{
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    right: 0;
+    width: 100%;
+    margin: 1%;
+    border-radius: 10px;
+    background-color: #3d8559;
+    color: aliceblue;
+    font-size: 18px;
+    padding-left: 3%;
+    padding-right: 3%;
+    cursor: pointer;
+}
+
+.fondoModal03{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    left: 0%;
+    top: 0%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #00000073;
+    translate: 1000ms;
+}
+.modal00{
+    position: fixed; /* Stay in place */
+    left: 35%;
+    top: 25%;
+    width: 30%; /* Full width */
+    height: 50%; /* Full height */
+    background-color: #3f4042;
+    border-radius: 20px;
+    border: 2px solid #717274;
+}
+.modal01{
+    position: fixed; /* Stay in place */
+    left: 35%;
+    top: 25%;
+    width: 30%; /* Full width */
+    height: 50%; /* Full height */
+    background-color: #3f4042;
+    border-radius: 20px;
+    border: 2px solid #717274;
+}
+.modal02{
+    position: fixed; /* Stay in place */
+    left: 35%;
+    top: 25%;
+    width: 30%; /* Full width */
+    height: 50%; /* Full height */
+    background-color: #3f4042;
+    border-radius: 20px;
+    border: 2px solid #717274;
+}
+.modal03{
+    position: fixed; /* Stay in place */
+    left: 35%;
+    top: 25%;
+    width: 30%; /* Full width */
+    height: 50%; /* Full height */
+    background-color: #3f4042;
+    border-radius: 20px;
+    border: 2px solid #717274;
+}
+.modalInput03{
+    position: relative;
+    background-color: #fefefe;
+    top: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 1px solid #888;
+    width: 65.5%;
+    height: 15%;
+    border-radius: 10px;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.modalBoton03{
+    position: relative;
+    background-color: #3d8559;
+    color: aliceblue;
+    width: 76%;
+    height: 15%;
+    font-size: 18px;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 10px;
+    border-style: none;
+    margin-left: 12%;
+    margin-right: 12%;
+    top: 35%;
+    cursor: pointer;
+}
+.modalTitulo03{
+    position: relative;
+    top: 10%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    color: aliceblue;
+    background-color: transparent;
+}
+.aviso{
+    position: relative;
+    top: 20%;
+    text-align: justify;
+    margin-left: 13%;
+    margin-right: 13%;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    color: aliceblue;
+    background-color: transparent;
+}
+.modalLabel{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    text-align: center;
+    vertical-align: center;
+    width: 50%;
+    height: 20%;
+    color: aliceblue;
+    font-size: 24px;
+    background-color: transparent;
 }

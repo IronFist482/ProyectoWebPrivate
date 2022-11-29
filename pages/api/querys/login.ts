@@ -8,7 +8,9 @@ export default iron(async(req:any,res:any)=>{
         const [[result]]:any = await pool.query('SELECT con_cue FROM cuenta WHERE cor_cue = ?',[correo])
         const bytesString = String.fromCharCode(...result.con_cue)
         try{
-            const resultado = bcryptjs.compare(contrasena,bytesString)
+            const resultado = bcryptjs.compareSync(contrasena,bytesString)
+            console.log(resultado)
+            console.log(bytesString)
             if(resultado){
                 const [data]:any = await pool.query('SELECT * FROM cuenta WHERE cor_cue = ?',[correo])
                 req.session.set('user', ...data)
@@ -21,20 +23,11 @@ export default iron(async(req:any,res:any)=>{
         catch(err){
             console.log(err)
         }
-        const sfResult=JSON.stringify(result)
-    
-        if(sfResult==undefined||sfResult==null){
-            console.log('Esas credenciales no coinciden')
-            return res.redirect(307, '/Signin')
-        }
-        else{
-            console.log('Entrasteee')
-            return res.redirect(307, '/Principal');
-        }
     }
     switch(req.method){
         case 'POST':
             try {
+                
                 const x:any = await consultarDatos(req,res)
                 return res.status(200).json(x);
             }

@@ -1,4 +1,5 @@
 
+import iron from '../config/session'
 import HeaderMaterias from '../src/components/HeaderMaterias'
 import Menu from "../src/components/Menu"
 import styles from '../styles/Quimica2.module.css'
@@ -29,3 +30,16 @@ export default function Quimica2(){
         </>
       )
 }
+export const getServerSideProps = iron(async({req,res}:any)=>{
+    const session = req.session.get('user')
+    if(!session){
+      res.statusCode = 302;
+      res.setHeader('Location', '/Login')
+      res.end()
+      return {props:{}}
+    }
+    return {
+      props: {session:session}
+    }
+    
+  })

@@ -35,7 +35,7 @@ export const getServerSideProps = iron(async({req,res}:any)=>{
   const session = req.session.get('user')
   if(!session){
     res.statusCode = 302;
-    res.setHeader('Location', '/Login')
+    res.setHeader('location', '/Login')
     res.end()
     return {props:{}}
   }
