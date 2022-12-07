@@ -6,6 +6,7 @@ export default iron(async(req:any,res:any)=>{
     const cambiarUnidad = async(req: any,res: any ) =>{
         const {correo,personalizacion} = req.body
         const [result2]:any = await pool.query('UPDATE cuenta SET id_per=? WHERE cor_cue = ?',[personalizacion,correo])
+        console.log(req.body)
         return result2
         
     }
@@ -15,6 +16,7 @@ export default iron(async(req:any,res:any)=>{
                 const x:any = await cambiarUnidad(req,res)
                 return res.status(200).json(x);
             } catch (error:any) {
+                console.log(error)
                 return res.status(400).json(error)
             }
     }

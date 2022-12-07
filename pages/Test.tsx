@@ -2,7 +2,7 @@ import style from '../styles/Test.module.css'
 import Preguntas from '../src/components/Preguntas'
 import iron from '../config/session'
 
-export default function Test(){
+export default function Test(props:any){
 
 
   return (
@@ -13,7 +13,7 @@ export default function Test(){
       <div className={style.divContenedorPrincipal}>
         <div className={style.titulo}>Test</div>
         <div className={style.divContenedorPregunta}>
-          <Preguntas></Preguntas>
+          <Preguntas props={props}></Preguntas>
         </div>
       </div>
     </div>
@@ -21,7 +21,6 @@ export default function Test(){
 }
 export const getServerSideProps = iron(async({req,res}:any)=>{
   const session = req.session.get('user')
-  console.log(session)
   if(session.id_per!=4){
     res.setHeader('location','/Principal')
     res.statusCode = 302
@@ -29,10 +28,7 @@ export const getServerSideProps = iron(async({req,res}:any)=>{
     return {props:{session:session}}
 
   }
-  else if(!session){
-    res.setHeader('location','/Login')
-    res.statusCode = 302
-    res.end()
+  else if(session.id_per==4){
     return {props:{session:session}}
   }
   else{

@@ -30,7 +30,7 @@ export const getServerSideProps = iron(async({req,res}:any)=>{
   }
   else{
     return {
-      props: {session:session}
+      props: {}
     }
   }
   

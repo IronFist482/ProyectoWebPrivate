@@ -20,14 +20,14 @@ export default function Quimica1(){
         <div className='circulo-morado03'></div>
         <div className={styles.divTitulo}>Competencias Particulares</div>
         <div className={styles.contenedorCompetenciasUnidades1}>
-          <div className={styles.contenedorDatos}></div>
-          <div className={styles.contenedorDatos}></div>
-          <div className={styles.contenedorDatos}></div>
+          <div className={styles.contenedorDatos}><div className={styles.tituloVideos}>Unidad I</div><div className={styles.descripcionVideos}>{unidad1}</div></div>
+          <div className={styles.contenedorDatos}><div className={styles.tituloVideos}>Unidad II</div><div className={styles.descripcionVideos}>{unidad2}</div></div>
+          <div className={styles.contenedorDatos}><div className={styles.tituloVideos}>Unidad III</div><div className={styles.descripcionVideos}>{unidad3}</div></div>
         </div>
         <div className={styles.contenedorCompetenciasUnidades2}>
-          <div className={styles.contenedorDatos}></div>
-          <div className={styles.contenedorDatos}></div>
-          <div className={styles.contenedorDatos}></div>
+          <div className={styles.contenedorDatos}><div className={styles.tituloVideos}>Unidad IV</div><div className={styles.descripcionVideos}>{unidad4}</div></div>
+          <div className={styles.contenedorDatos}><div className={styles.tituloVideos}>Unidad V</div><div className={styles.descripcionVideos}>{unidad5}</div></div>
+          <div className={styles.contenedorDatos}><div className={styles.tituloVideos}>Unidad VI</div><div className={styles.descripcionVideos}>{unidad6}</div></div>
         </div>
         
 

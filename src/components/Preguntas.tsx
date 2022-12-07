@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import axios from 'axios'
+import { E } from 'chart.js/dist/chunks/helpers.core'
 import { redirect } from 'next/dist/server/api-utils'
 import React,{useState} from 'react'
 import iron from '../../config/session'
@@ -43,12 +44,11 @@ export default function Preguntas(props:any) {
   const [puntosAuditivo,setPuntosAuditivo] = useState(0)
   const [puntosKinestesico,setPuntosKinestesico] = useState(0)
   const [preguntasPuntos,setPreguntasPuntos] = useState(0)
-  const [tipoA,setTipoA] = useState(0)
-
+  const [tipoA,setTipoA] = useState(Number)
 
 
   function accion(e: { preventDefault: () => void }){
-    if(posicion<22){
+    if(posicion<23){
       e.preventDefault();
       asignar()
       setPosicion(posicion+1)
@@ -64,12 +64,15 @@ export default function Preguntas(props:any) {
     }
     else{
       if(puntosVisual>puntosAuditivo && puntosVisual>puntosKinestesico){
+        console.log("visual")
         setTipoA(1)
       }
       else if(puntosAuditivo>puntosVisual && puntosAuditivo>puntosKinestesico){
+        console.log("auditivo")
         setTipoA(2)
       }
       else{
+        console.log("kinestesico")
         setTipoA(3)
       }
       console.log(tipoA)
@@ -78,11 +81,11 @@ export default function Preguntas(props:any) {
   }
   const asignarAprendizaje = async(e:any) => {
     e.preventDefault()
-    const res = await axios.post('/api/querys/progresion', {
-      correo: props.session.cor_cue,
-      pregresion: tipoA
+    const res = await axios.post('/api/querys/personalizacion', {
+      correo: props.props.session.cor_cue,
+      personalizacion: tipoA
     })
-    
+    console.log(res)
   }
   function asignar(){
     setNumeroD(numero[posicion])
@@ -106,3 +109,4 @@ export default function Preguntas(props:any) {
     
   )
 }
+

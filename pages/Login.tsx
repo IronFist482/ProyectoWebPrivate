@@ -13,7 +13,7 @@ export default function Login(){
     const res = await axios.post('/api/querys/login', {
       correo: correo,
       contrasena: contrasena
-    }).then(() => Router.replace('/Principal')).catch(resError)
+    }).catch(resError)
     
   }
   const resError = (res:any) => {

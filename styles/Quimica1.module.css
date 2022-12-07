@@ -53,3 +53,24 @@
     border: 2px solid rgb(85, 85, 85);
 
 }
+.tituloVideos{
+    position: relative;
+    width: 60%;
+    height: 20%;
+    top: 5%;
+    left: 20%;
+    text-align: center;
+    background-color: #0d0e0d00;
+    font-size: 25px;
+    color: #138b63;
+  }
+  .descripcionVideos{
+    position: absolute;
+    width: 80%;
+    height: 40%;
+    top: 35%;
+    left: 10%;
+    background-color: #0d0e0d00;
+    font-size: 17px;
+    color: #686868;
+  }

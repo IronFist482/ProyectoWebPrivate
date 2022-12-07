@@ -33,14 +33,14 @@ export default function Home({session}:any) {
 }
 export const getServerSideProps = iron(async({req,res}:any)=>{
   const session = req.session.get('user')
-  if(!session){
+  if(session){
     res.statusCode = 302;
-    res.setHeader('location', '/Login')
+    res.setHeader('location', '/Principal')
     res.end()
-    return {props:{}}
+    return {props:{session:session}}
   }
   return {
-    props: {session:session}
+    props: {}
   }
   
 })
