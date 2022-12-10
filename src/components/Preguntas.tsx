@@ -7,8 +7,9 @@ import iron from '../../config/session'
 import style from '../../styles/Preguntas.module.css'
 
 export default function Preguntas(props:any) {
-  const numero=["2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
+  const numero=["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]
   const preguntas=[
+  "¿Eres limpio y ordenado?",
   "¿Hablas muy rápido?",
   "¿Planeas muy bien tu agenda?",
   "¿Ves las palabras en tu mente?",
@@ -34,7 +35,7 @@ export default function Preguntas(props:any) {
   "¿Gesticulas mucho tu rostro cuando te expresas?"
   ]
 
-  const [posicion,setPosicion] = useState(0)
+  const [posicion,setPosicion] = useState(1)
   const [numeroD,setNumeroD] = useState("1")
   const [preguntaD,setPreguntaD] = useState("¿Eres limpio y ordenado?")
   const [opcion1D,setOpcion1D] = useState("Siempre")
@@ -44,43 +45,43 @@ export default function Preguntas(props:any) {
   const [puntosAuditivo,setPuntosAuditivo] = useState(0)
   const [puntosKinestesico,setPuntosKinestesico] = useState(0)
   const [preguntasPuntos,setPreguntasPuntos] = useState(0)
-  const [tipoA,setTipoA] = useState(Number)
+  let tipoA = 0;
 
 
   function accion(e: { preventDefault: () => void }){
-    if(posicion<23){
+    console.log(posicion)
+    if(posicion<24){
       e.preventDefault();
       asignar()
-      setPosicion(posicion+1)
-      if (posicion<8) {
+      
+      if (posicion<9) {
         setPuntosVisual(puntosVisual+preguntasPuntos)
       }
-      else if(posicion<16){
+      else if(posicion<17){
         setPuntosAuditivo(puntosAuditivo+preguntasPuntos)
       }
       else{
         setPuntosKinestesico(puntosKinestesico+preguntasPuntos)
       }
+      setPosicion(posicion+1)
     }
     else{
       if(puntosVisual>puntosAuditivo && puntosVisual>puntosKinestesico){
         console.log("visual")
-        setTipoA(1)
+        tipoA = 1
       }
       else if(puntosAuditivo>puntosVisual && puntosAuditivo>puntosKinestesico){
         console.log("auditivo")
-        setTipoA(2)
+        tipoA = 2
       }
       else{
         console.log("kinestesico")
-        setTipoA(3)
+        tipoA = 3
       }
-      console.log(tipoA)
       asignarAprendizaje(e)
     }
   }
   const asignarAprendizaje = async(e:any) => {
-    e.preventDefault()
     const res = await axios.post('/api/querys/personalizacion', {
       correo: props.props.session.cor_cue,
       personalizacion: tipoA

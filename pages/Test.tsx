@@ -21,6 +21,7 @@ export default function Test(props:any){
 }
 export const getServerSideProps = iron(async({req,res}:any)=>{
   const session = req.session.get('user')
+  console.log(session.id_per)
   if(session.id_per!=4){
     res.setHeader('location','/Principal')
     res.statusCode = 302

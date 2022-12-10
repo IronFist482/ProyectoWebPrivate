@@ -15,10 +15,25 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/Test": [
+    "/Quimica1": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Test.js"
+      "static/chunks/pages/Quimica1.js"
+    ],
+    "/Quimica2": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Quimica2.js"
+    ],
+    "/TablaPeriodica": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/TablaPeriodica.js"
+    ],
+    "/VideosQuimica1": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/VideosQuimica1.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
